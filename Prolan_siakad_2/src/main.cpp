@@ -38,12 +38,12 @@ int main()
 		switch (menu_terpilih) {
 			case 1:
 				{
-					string id, nama, nrp, departemen;
-					int dd, mm, yy, tahunmasuk;
+					string id, nama, nrp, departemen, matakuliah;
+					int dd, mm, yy, tahunmasuk, sks;
 					cout << "Masukkan id: ";
 					cin >> id;
 					cout << "Masukkan nama: ";
-					getline(cin, nama);
+					cin >> nama;
 					cout << "Masukkan tgl lahir: ";
 					cin >> dd;
 					cout << "Masukkan bln lahir: ";
@@ -53,19 +53,16 @@ int main()
 					cout << "Masukkan nrp: ";
 					cin >> nrp;
 					cout << "Masukkan departemen: ";
-					getline(cin, departemen);
+					cin >> departemen;
 					cout << "Masukkan tahun masuk: ";
 					cin >> tahunmasuk;
+					cout<< "silakan ketikan matkul apa saja yang ingin diambil";
+					cin >> matakuliah;
+					cout<< "jumlah sks dari seluruh matkul yang diambil";
+					cin>> sks;
 
 					mahasiswa mhs(id, nama, dd, mm, yy, nrp, departemen, tahunmasuk);
 					recMhs.push_back(mhs);
-
-					string matakuliah;
-					int sks;
-					cout<< "silakan ketikan matkul apa saja yang ingin diambil";
-					getline(cin, matakuliah);
-					cout<< "jumlah sks dari seluruh matkul yang diambil";
-					cin>> sks;
 
 					matkul mkl(matakuliah, sks);
 					recmatkul.push_back(mkl);
@@ -78,7 +75,7 @@ int main()
 					cout << "Masukkan id: ";
 					cin >> id;
 					cout << "Masukkan nama: ";
-					getline(cin, nama);
+					cin >> nama;
 					cout << "Masukkan tgl lahir: ";
 					cin >> dd;
 					cout << "Masukkan bln lahir: ";
@@ -88,7 +85,7 @@ int main()
 					cout << "Masukkan npp: ";
 					cin >> npp;
 					cout << "Masukkan departemen: ";
-					getline(cin, departemen);
+					cin >> departemen;
 					cout << "Masukkan pendidikan: ";
 					cin >> pendidikan;
 
@@ -103,7 +100,7 @@ int main()
 					cout << "Masukkan id: ";
 					cin >> id;
 					cout << "Masukkan nama: ";
-					getline(cin, nama);
+					cin >> nama;
 					cout << "Masukkan tgl lahir: ";
 					cin >> dd;
 					cout << "Masukkan bln lahir: ";
@@ -137,11 +134,6 @@ int main()
 						}
 					}
 
-					//for (int j = 0; j <= recmatkul.size(); j++)
-					//{
-						//cout << "Matkul yang diambil adalah : " << recmatkul[j].getmatkul() << endl;
-						//cout << "Jumlah sks matkul yang diambil adalah : " << recmatkul[j].getsks() << endl;
-					//}
 					
 				}
 				break;
